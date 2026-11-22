@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1d2671, #c33764);
+    }
+
+    .calculator {
+      width: 320px;
+      padding: 20px;
+      background: #1e1e2f;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .display {
+      width: 100%;
+      height: 70px;
+      margin-bottom: 20px;
+      padding: 15px;
+      font-size: 28px;
+      text-align: right;
+      border: none;
+      border-radius: 12px;
+      background: #2b2b3c;
+      color: #fff;
+      outline: none;
+	  overflow: auto;
+    }
+
+    .buttons {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+
+    button {
+      height: 60px;
+      border: none;
+      border-radius: 12px;
+      font-size: 20px;
+      cursor: pointer;
+      transition: transform 0.15s ease, background 0.15s ease;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    /* Number buttons */
+    .numbtn {
+      background: #3a3a55;
+      color: #fff;
+    }
+
+    .numbtn:hover {
+      background: #4a4a6a;
+    }
+	 #decimal{
+	 background: #3a3a55;
+      color: #fff;
+	  }
+
+    /* Operator buttons */
+    .opbtn {
+      background: #ff8c42;
+      color: #fff;
+    }
+
+    .opbtn:hover {
+      background: #ff9f5a;
+    }
+
+    /* AC & Undo buttons */
+    .delbtn {
+      background: #ff4d4d;
+      color: #fff;
+    }
+
+    .delbtn:hover {
+      background: #ff6666;
+    }
+
+    /* Equals button (styled via id) */
+    #equals {
+      background: #20c997;
+      color: #fff;
+      grid-row: span 2;
+    }
+
+    #equals:hover {
+      background: #38d9a9;
+    }
+
+    /* Make 0 span two columns without extra classes */
+    .buttons button:nth-child(18) {
+      grid-column: span 2;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="calculator">
+    <div class="display"></div>
+
+    <div class="buttons">
+      <button class="delbtn">AC</button>
+      <button class="delbtn">⌫</button>
+      <button class="opbtn">/</button>
+      <button class="opbtn">x</button>
+
+      <button class="numbtn">7</button>
+      <button class="numbtn">8</button>
+      <button class="numbtn">9</button>
+      <button class="opbtn">-</button>
+
+      <button class="numbtn">4</button>
+      <button class="numbtn">5</button>
+      <button class="numbtn">6</button>
+      <button class="opbtn">+</button>
+	  
+      <button class="numbtn">1</button>
+      <button class="numbtn">2</button>
+      <button class="numbtn">3</button>
+      <button id="equals">=</button>
+      <button class="numbtn">0</button>
+	  <button class="opbtn" id="decimal"><h3>.</h3></button>
+    </div>
+  </div>
+<script src='calculator.js'></script>
+</body>
+</html>
